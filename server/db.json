@@ -1,0 +1,33 @@
+{
+  "rentals": {
+    "manchester": [
+      {
+        "id": 1,
+        "beds": 2,
+        "address": "B314, Angel Gardens",
+        "rent": "£1600",
+        "description": "",
+        "furnished": true,
+        "maximumTenants": 4
+      },
+      {
+        "id": 2,
+        "beds": 1,
+        "address": "C413, Angel Gardens",
+        "rent": "£1200",
+        "description": "",
+        "furnished": true,
+        "maximumTenants": 2
+      },
+      {
+        "id": 3,
+        "beds": 3,
+        "address": "A121, Angel Gardens",
+        "rent": "£2000",
+        "description": "",
+        "furnished": true,
+        "maximumTenants": 6
+      }
+    ]
+  }
+}
