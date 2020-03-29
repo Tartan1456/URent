@@ -2,10 +2,13 @@ import React from 'react';
 
 import { ApolloProvider } from '@apollo/react-hooks';
 import { ApolloClient, HttpLink, InMemoryCache, gql } from 'apollo-boost';
+import { Router } from "@reach/router";
 
-import { Layout } from 'antd';
+import { Layout} from 'antd';
+import 'antd/dist/antd.css';
 
-import './index.css';
+import Home from '../homepage';
+import './index.scss';
 
 const client = new ApolloClient({
   cache: new InMemoryCache(),
@@ -27,16 +30,26 @@ client
     `
   });
 
-const HomePage = () => {
+const App = () => {
   const { Header, Content, Footer } = Layout;
 
   return (
     <ApolloProvider client={client}>
-      <div className="homepage">
-
-      </div>
+      <Layout>
+        <Header className='header'>
+          <div className='header__logo' />
+        </Header>
+        <Content>
+          <Router>
+            <Home path="/" />
+          </Router>
+        </Content>
+        <Footer>
+          Website built by Malcolm McConaghy
+        </Footer>
+      </Layout>
     </ApolloProvider>
   );
 }
 
-export default HomePage;
+export default App;

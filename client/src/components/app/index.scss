@@ -1,0 +1,15 @@
+@import '../../utils/variables';
+
+.header {
+  background-color: $primary;
+
+  &__logo {
+    background: rgba(255, 255, 255, 0.2);
+    float: left;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    width: 120px;
+  }
+}
+
+
