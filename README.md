@@ -6,6 +6,7 @@ A webapp for showing rentals in a specific area.
 Built using:
 * React
 * Typescript
+* Sass
 * Reach Router
 * Ant Design
 * React Testing Library
