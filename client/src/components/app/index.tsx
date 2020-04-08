@@ -35,9 +35,11 @@ const App = () => {
 
   return (
     <ApolloProvider client={client}>
-      <Layout>
+      <Layout data-testid="app-layout">
         <Header className='header'>
-          <div className='header__logo' />
+          <div className='header__logo'>
+            <img src={require('../../images/URent.svg')} alt='URent' />
+          </div>
         </Header>
         <Content>
           <Router>
