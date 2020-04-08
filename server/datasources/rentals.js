@@ -6,8 +6,8 @@ class RentalsAPI extends RESTDataSource {
     this.baseURL = 'http://localhost:4000/';
   }
 
-  async getRentals() {
-    return this.get('api/getRentals');
+  async getRentals(searchLocation) {
+    return this.get(`api/getRentals?searchLocation=${searchLocation}`);
   }
 };
 

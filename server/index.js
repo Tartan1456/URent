@@ -25,14 +25,14 @@ const typeDefs = gql`
   # clients can execute, along with the return type for each. In this
   # case, the "rentals" query returns an array of zero or more Rentals (defined above).
   type Query {
-    rentals: [Rental]
+    rentals(searchLocation: String): [Rental]
   }
 `;
 
 const resolvers = {
   Query: {
-    rentals: async(_source, _args, { dataSources }) => {
-      return dataSources.rentalsAPI.getRentals();
+    rentals: async(_source, args, { dataSources }) => {
+      return dataSources.rentalsAPI.getRentals(args.searchLocation);
     }
   },
 };
@@ -63,7 +63,7 @@ async function StartServer() {
     method: 'GET',
     path: '/api/getRentals',
     handler: (request, h) => {
-      return db.get('rentals.manchester').value();
+      return db.get(`rentals.${request.query.searchLocation}`).value();
     }
   });
 

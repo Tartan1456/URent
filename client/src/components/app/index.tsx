@@ -21,7 +21,7 @@ client
   .query({
     query: gql`
       {
-        rentals {
+        rentals(searchLocation: "manchester") {
           beds,
           address,
           rent
