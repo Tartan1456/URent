@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { ApolloProvider } from '@apollo/react-hooks';
-import { ApolloClient, HttpLink, InMemoryCache, gql } from 'apollo-boost';
+import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-boost';
 import { Router } from "@reach/router";
 
 import { Layout} from 'antd';
 import 'antd/dist/antd.css';
 
 import Home from '../homepage';
+import SearchResults from '../searchpage';
 import './index.scss';
 
 const client = new ApolloClient({
@@ -16,19 +17,6 @@ const client = new ApolloClient({
     uri: 'http://localhost:4000/graphql',
   })
 });
-
-client
-  .query({
-    query: gql`
-      {
-        rentals(searchLocation: "manchester") {
-          beds,
-          address,
-          rent
-        }
-      }
-    `
-  });
 
 const App = () => {
   const { Header, Content, Footer } = Layout;
@@ -44,6 +32,7 @@ const App = () => {
         <Content>
           <Router>
             <Home path="/" />
+            <SearchResults path="search/:searchLocation" />
           </Router>
         </Content>
         <Footer>

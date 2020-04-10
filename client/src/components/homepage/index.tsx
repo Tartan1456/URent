@@ -1,6 +1,6 @@
 import React, { Fragment, FunctionComponent } from 'react';
 
-import { RouteComponentProps } from '@reach/router';
+import { RouteComponentProps, navigate } from '@reach/router';
 
 import { Input, Typography, Card } from 'antd';
 import 'antd/dist/antd.css';
@@ -11,6 +11,10 @@ const Home: FunctionComponent<RouteComponentProps> = () => {
   const { Search } = Input;
   const { Title } = Typography;
 
+  const onSearchClick = (value: string) => {
+    navigate(`/search/${value.toLocaleLowerCase()}`);
+  };
+
   return (
     <Fragment>
       <div className='hero' data-testid="home-hero">
@@ -18,7 +22,7 @@ const Home: FunctionComponent<RouteComponentProps> = () => {
           <Title>Find your new home</Title>
           <Search
             placeholder="Where do you want to rent..."
-            onSearch={value => console.log(value)}
+            onSearch={value => onSearchClick(value)}
             enterButton="Search"
           />
         </div>
