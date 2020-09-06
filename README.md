@@ -16,4 +16,4 @@ Built using:
 * Apollo GraphQL
 * Lowdb
 
-`yarn start` in project root to run client and server together
+`cd server && yarn start` in project root to run client and server together
