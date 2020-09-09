@@ -29,7 +29,7 @@ const App = () => {
             <img src={require('../../images/URent.svg')} alt='URent' />
           </div>
         </Header>
-        <Content>
+        <Content className='content'>
           <Router>
             <Home path="/" />
             <SearchResults path="search/:searchLocation" />

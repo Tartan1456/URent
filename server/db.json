@@ -6,7 +6,7 @@
         "beds": 2,
         "address": "B314, Angel Gardens",
         "rent": "£1600",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, urna in vehicula bibendum, mauris arcu ultrices lectus, eget varius orci nulla nec elit. Donec lacinia ipsum a risus aliquam egestas. Pellentesque placerat venenatis nunc vel venenatis. Fusce aliquet sollicitudin enim, consectetur rhoncus elit efficitur a. Sed egestas nulla vel nulla accumsan ullamcorper. Ut pretium libero eros, a viverra tortor tincidunt at. Mauris tincidunt convallis tempor. Donec egestas neque odio, a luctus felis semper eu. Suspendisse et est enim. In eleifend ligula id consequat pellentesque. Sed venenatis tellus vel vestibulum condimentum.",
         "furnished": true,
         "maximumTenants": 4
       },
@@ -15,7 +15,7 @@
         "beds": 1,
         "address": "C413, Angel Gardens",
         "rent": "£1200",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, urna in vehicula bibendum.",
         "furnished": true,
         "maximumTenants": 2
       },
@@ -24,7 +24,7 @@
         "beds": 3,
         "address": "A121, Angel Gardens",
         "rent": "£2000",
-        "description": "",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fringilla, urna in vehicula bibendum, mauris arcu ultrices lectus, eget varius orci nulla nec elit. Donec lacinia ipsum a risus aliquam egestas. Pellentesque placerat venenatis nunc vel venenatis. Fusce aliquet sollicitudin enim, consectetur rhoncus elit efficitur a. Sed egestas nulla vel nulla accumsan ullamcorper. Ut pretium libero eros, a viverra tortor tincidunt at. Mauris tincidunt convallis tempor. Donec egestas neque odio, a luctus felis semper eu. Suspendisse et est enim. In eleifend ligula id consequat pellentesque. Sed venenatis tellus vel vestibulum condimentum. Phasellus dictum nisi ac est placerat, et volutpat sapien varius. Praesent a velit sit amet elit rutrum cursus a quis dui. Nullam nunc enim, laoreet sed purus ac, tincidunt fermentum tortor. In hac habitasse platea dictumst. Donec et urna a ligula eleifend pulvinar. Integer suscipit erat a turpis tempor suscipit. Etiam mollis erat in molestie auctor. Sed mollis urna nec orci vestibulum, ut finibus nibh lacinia. Aenean ut neque sed dui rutrum auctor nec quis ligula. Cras fermentum lectus id feugiat vehicula. Nullam feugiat, sapien non hendrerit blandit, dui lacus pulvinar libero, nec scelerisque nisl magna nec tortor.",
         "furnished": true,
         "maximumTenants": 6
       }

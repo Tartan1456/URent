@@ -4,8 +4,10 @@ import { RouteComponentProps } from '@reach/router';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
-import { Input, Typography } from 'antd';
+// import { Input, Typography } from 'antd';
 import 'antd/dist/antd.css';
+
+import SearchResult from '../searchResult';
 
 import './index.scss';
 
@@ -19,13 +21,16 @@ const SearchResults: FunctionComponent<SearchResultsProps> = (props) => {
       rentals(searchLocation: "${props.searchLocation}") {
         beds,
         address,
-        rent
+        rent,
+        description,
+        furnished,
+        maximumTenants
       }
     }
   `;
 
-  const { Search } = Input;
-  const { Title } = Typography;
+  // const { Search } = Input;
+  // const { Title } = Typography;
   const { loading, error, data } = useQuery(SEARCH_RESULTS);
 
   if (loading) return <p>Loading...</p>;
@@ -34,10 +39,7 @@ const SearchResults: FunctionComponent<SearchResultsProps> = (props) => {
   return (
     <Fragment>
       {data.rentals.map((rental: any) => (
-        <Fragment>
-          <div>{rental.beds}</div>
-          <div>{rental.address}</div>
-        </Fragment>
+        <SearchResult rental={rental} />
       ))}
     </Fragment>
   )
