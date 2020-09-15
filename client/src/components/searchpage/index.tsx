@@ -15,29 +15,32 @@ interface SearchResultsProps extends RouteComponentProps {
   searchLocation?: string;
 }
 
-const SearchResults: FunctionComponent<SearchResultsProps> = (props) => {
-  const SEARCH_RESULTS = gql`
-    {
-      rentals(searchLocation: "${props.searchLocation}") {
-        beds,
-        address,
-        rent,
-        description,
-        furnished,
-        maximumTenants
-      }
+export const SEARCH_RESULTS = gql`
+  query GetRentals($searchLocation: String) {
+    rentals(searchLocation: $searchLocation) {
+      beds,
+      address,
+      rent,
+      description,
+      furnished,
+      maximumTenants
     }
-  `;
+  }
+`;
 
+const SearchResults: FunctionComponent<SearchResultsProps> = (props) => {
   // const { Search } = Input;
   // const { Title } = Typography;
-  const { loading, error, data } = useQuery(SEARCH_RESULTS);
+  const { loading, error, data } = useQuery(
+    SEARCH_RESULTS,
+    { variables: {searchLocation: props.searchLocation} }
+  );
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error...</p>;
 
   return (
-    <Fragment>
+    <Fragment data-testid="search-result-fragment">
       {data.rentals.map((rental: any) => (
         <SearchResult rental={rental} />
       ))}
