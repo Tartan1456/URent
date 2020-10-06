@@ -9,5 +9,8 @@
   },
   "scripts": {
     "start": "concurrently \"nodemon index.js\" \"cd .. && cd client && yarn start\""
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

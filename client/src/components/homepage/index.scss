@@ -32,10 +32,11 @@
 .homepage {
   &__cards {
     display: flex;
+    flex-direction: column;
     padding: 1em;
 
-    @media (max-width: $breakpoint-tablet) {
-      flex-direction: column;
+    @media (min-width: $breakpoint-tablet) {
+      flex-direction: row;
     }
   }
 }
@@ -46,7 +47,24 @@
 
   @media (min-width: $breakpoint-tablet) {
     margin: 0 1em;
+
+    &-cover {
+      overflow: hidden;
+    }
   }
+
+  @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-tablet--landscape) {
+    &-cover {
+      max-height: 9em;
+    }
+  }
+
+  @media (min-width: $breakpoint-tablet--landscape) {
+    &-cover {
+      max-height: 12em;
+    }
+  }
+
 
   @media (max-width: $breakpoint-tablet) {
     &:last-of-type {

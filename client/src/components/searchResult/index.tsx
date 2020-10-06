@@ -28,7 +28,7 @@ const SearchResult: FunctionComponent<SearchResultProps> = ({rental}) => {
         <Text>Rent: { rent }</Text>
         <Text>{beds} bed Flat, { address }</Text>
         <Paragraph ellipsis={{ rows: 2, expandable: false }}>{ description }</Paragraph>
-        <Text>Furnished: { furnished }</Text>
+        <Text>Furnished: { furnished ? 'Yes' : 'No'}</Text>
         <Text>Maximum Occupancy: { maximumTenants }</Text>
         <Button className='searchResult__more-btn' type="primary">See More Details</Button>
       </div>
