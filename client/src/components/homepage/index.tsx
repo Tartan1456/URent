@@ -17,6 +17,7 @@ const Home: FunctionComponent<RouteComponentProps> = () => {
 
   return (
     <Fragment>
+      <h1> Test</h1>
       <div className='hero' data-testid="home-hero">
         <div className='hero__content'>
           <Title>Find your new home</Title>
